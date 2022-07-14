@@ -1,20 +1,23 @@
 
-let cant = parseFloat(prompt("ingrese la cantidad de sumas que quiera hacer"));
-let cant2;
-let acumulador = 0;
-let i;
-let res;
-for (i = 1 ; i < cant ; i++ ) {
-    cant2 = parseFloat(prompt("Ingrese el numero que quieres que se le suma" + i))
-    acumulador = acumulador + cant2;
-    
-}
-alert(acumulador)
+let player1 = parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera"))
+let player2 = parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera"))
 
-let resta = parseFloat(prompt("ingrese la cantidad de veces que quieras restar ese resultado"))
-let rest;
-for (i = 0; i< resta; i++) {
-    rest = parseFloat(prompt("ingrese el numero que le quieras restar" + i))
-    acumulador = acumulador - rest;
+
+function juego(player1, player2) {
+    let resultado = player1 + player2
+
+        switch(resultado){
+            case "3":
+                return alert("Gana Papel")
+            break;
+            case "4": 
+                return alert("Gana Piedra")
+            break;
+            case "5":
+                return alert("Gana Tijera")
+            break;
+        }
 }
-alert(acumulador)
+
+  resultado = juego(player1, player2) 
+ 
