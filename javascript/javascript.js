@@ -17,7 +17,10 @@ function juego(player1, player2) {
                 return alert("Gana Tijera")
             break;
         }
+        return resultado
 }
 
-  resultado = juego(player1, player2) 
- 
+  console.log(juego(player1, player2))
+  if(player1==player2){
+        alert("Empate")
+  }
