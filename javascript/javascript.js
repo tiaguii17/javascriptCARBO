@@ -1,14 +1,15 @@
 
+
 let player1 = parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera"))
 let player2 = parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera"))
 
+ 
 
 function juego(player1, player2) {
     let resultado = player1 + player2
-  
     if(player1 == player2){
-        alert("Empate")
-  }
+        alert("Empate");
+  } else {
         switch(resultado){
             case 3:
                 return alert("Gana Papel")
@@ -21,7 +22,7 @@ function juego(player1, player2) {
             break;
         }
             return resultado;
-
+    }
 }
 
   console.log(juego(player1, player2))
