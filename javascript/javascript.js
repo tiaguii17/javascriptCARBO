@@ -7,20 +7,24 @@ function juego(player1, player2) {
     let resultado = player1 + player2
 
         switch(resultado){
-            case "3":
+            case 3:
                 return alert("Gana Papel")
             break;
-            case "4": 
+            case 4: 
                 return alert("Gana Piedra")
             break;
-            case "5":
+            case 5:
                 return alert("Gana Tijera")
             break;
         }
-        return resultado
+            return resultado;
+
 }
 
   console.log(juego(player1, player2))
-  if(player1==player2){
+
+ 
+
+  if(player1 == player2){
         alert("Empate")
   }
