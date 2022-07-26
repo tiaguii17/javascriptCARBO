@@ -1,6 +1,6 @@
 
 
-const elecciones = ["Gana papel"];
+const elecciones = [];
 
 function eleccion (){
     let player1;
@@ -25,7 +25,7 @@ function juego(player1, player2){
     } else {
         switch(resultado){
             case 3:
-                return elecciones.alert("Gana Papel");
+                return alert("Gana Papel");
                 
             case 4: 
                 return alert("Gana Piedra");
