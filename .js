@@ -2,19 +2,17 @@
 
 const elecciones = [];
 
-class ppt {
-    constructor(num) {
-        this.num = num;
-    }
+function ppt(num){
+    this.num = num
 }
 
 function eleccion (){
     let min = 1;
     let max = 3;
 
-    let player = new ppt (parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera")));
-    let player1 = player;
-    elecciones.push(player1);
+    const player1 = new ppt (parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera")));
+    elecciones.push(player1)
+
     let player2 = Math.floor(Math.random()*(max-min+1)+min);
     elecciones.push(player2)
         alert("la maquina escogio:" +" "+ player2);
@@ -43,10 +41,3 @@ function juego(player1, player2){
     }   
 }
     console.log(elecciones)
-
-
-
-
- 
-
-  
