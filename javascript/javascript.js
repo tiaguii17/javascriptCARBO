@@ -2,7 +2,7 @@
 
 const elecciones = [];
 
-class ppt {
+class Ppt {
     constructor(num) {
         this.num = num;
     }
@@ -12,8 +12,9 @@ function eleccion (){
     let min = 1;
     let max = 3;
 
-    let player = new ppt (parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera")));
-    let player1 = player;
+    const ppt1 = new Ppt (parseInt(prompt("Ingrese una opcion:\n 1= Piedra\n 2= Papel\n 3= Tijera")));
+    let player1 = new Ppt (ppt1)
+    console.log(player1)
     elecciones.push(player1);
     let player2 = Math.floor(Math.random()*(max-min+1)+min);
     elecciones.push(player2)
@@ -42,8 +43,9 @@ function juego(player1, player2){
             return resultado;
     }   
 }
+    console.log(juego)
     console.log(elecciones)
-
+    
 
 
 
