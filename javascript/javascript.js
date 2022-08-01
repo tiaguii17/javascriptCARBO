@@ -24,7 +24,7 @@ return resultado;
     eleccion();
 
 function juego(player1, player2){
-    let resultado = player1 + player2
+    let resultado = player1.num + player2
     if(player1 == player2){
           alert("Empate");
     } else {
