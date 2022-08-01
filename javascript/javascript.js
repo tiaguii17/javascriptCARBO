@@ -8,6 +8,9 @@ class Ppt {
     }
 }
 
+let sumatoria1 = 0;
+let sumatoria2 = 0;
+
 function eleccion() {
     let min = 1;
     let max = 3;
@@ -15,7 +18,6 @@ function eleccion() {
     let nombre = prompt("Ingrese su nombre: ");
 
 
-    
     for (let i = 0; i < 3; i++) {
 
         let player1 = new Ppt(parseInt(prompt(`
@@ -24,13 +26,13 @@ function eleccion() {
     2= Papel 
     3= Tijera`)));
 
-        console.log(player1);
+    console.log(player1);
 
-        ELECCIONES.push(player1);
+    ELECCIONES.push(player1);
 
-        console.log(ELECCIONES);
+    console.log(ELECCIONES);
 
-        let player2 = Math.floor(Math.random() * (max - min + 1) + min);
+    let player2 = Math.floor(Math.random() * (max - min + 1) + min);
 
         console.log(player2);
 
@@ -40,10 +42,11 @@ function eleccion() {
 
         alert(`la maquina escogio: ${player2}`);
 
-        juego(player1, player2, nombre)
+            juego(player1, player2, nombre)
 
+        }
     }
-}
+
 eleccion();
 
 function juego(player1, player2, nombre) {
@@ -63,26 +66,32 @@ function juego(player1, player2, nombre) {
         alert("empate");
     }
     else if (miNumero === 1 && player2 === 2) {
+        sumatoria2++;
         maquina++;
         alert("Gana la maquina");
     }
     else if (miNumero === 1 && player2 === 3) {
+        sumatoria1++;
         jugador++;
         alert(`Gana ${nombre}`);
     }
     else if (miNumero === 2 && player2 === 1) {
+        sumatoria1++;
         jugador++;
         alert(`Gana ${nombre}`);
     }
     else if (miNumero === 2 && player2 === 3) {
+        sumatoria2++;
         maquina++;
         alert("Gana la maquina");
     }
     else if (miNumero === 3 && player2 === 1) {
+        sumatoria2++;
         maquina++;
         alert("Gana la maquina");
     }
     else if (miNumero === 3 && player2 === 2) {
+        sumatoria1++;
         jugador++;
         alert(`Gana ${nombre}`);
     }
@@ -103,12 +112,22 @@ function juego(player1, player2, nombre) {
             font-size: 15px;
             border-radius: 5px;
         `);
-
-    
-
 }
 
-
+let resJ = sumatoria1; 
+let resM = sumatoria2;
+    
+if(resJ > resM){
+    alert(`Gana El Jugador
+    puntuacion: ${sumatoria1}`)
+}else if(resJ < resM){
+    alert(`Gana la Maquina
+    puntuacion: ${sumatoria2}`)
+}else if(resJ = resM){
+    alert(`Empate
+    Jugador: ${sumatoria1}
+    Maquina: ${sumatoria2}`)
+}
  
 
   
