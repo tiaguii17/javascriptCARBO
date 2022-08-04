@@ -1,31 +1,37 @@
 
 
-const ELECCIONES = [];
-
-class Ppt {
-    constructor(num) {
-        this.num = num
-    }
-}
+/*const ELECCIONES = [];
 
 let sumatoria1 = 0;
-let sumatoria2 = 0;
+let sumatoria2 = 0;*/
 
-function eleccion() {
+let buttonPiedra = document.getElementById ("piedra");
+    buttonPiedra.onclick = jugador1;
+let buttonPapel = document.getElementById ("papel");
+    buttonPapel.onclick = jugador1;
+let buttonTijera = document.getElementById ("tijera");
+    buttonTijera.onclick = jugador1;
+
+    function jugador1() {
+    if (buttonPiedra = true){
+        return 1
+    }else if (buttonPapel = true){
+        return 2
+    }else if (buttonTijera = true){
+        return 3
+    }
+    
+} 
+    jugador1()
+    console.log(jugador1)
+/*function eleccion() {
     let min = 1;
     let max = 3;
-
-    let nombre = prompt("Ingrese su nombre: ");
 
 
     for (let i = 0; i < 3; i++) {
 
-        let player1 = new Ppt(parseInt(prompt(`
-    Ingrese una opcion: 
-    1= Piedra 
-    2= Papel 
-    3= Tijera`)));
-
+        let player1 = jugador1();
     console.log(player1);
 
     ELECCIONES.push(player1);
@@ -42,16 +48,16 @@ function eleccion() {
 
         alert(`la maquina escogio: ${player2}`);
 
-            juego(player1, player2, nombre)
+            juego(player1, player2)
 
         }
     }
 
 eleccion();
 
-function juego(player1, player2, nombre) {
+function juego(player1, player2) {
 
-    let miNumero = player1.num;
+    let miNumero = player1;
 
     let jugador = 0;
     let maquina = 0;
@@ -73,12 +79,12 @@ function juego(player1, player2, nombre) {
     else if (miNumero === 1 && player2 === 3) {
         sumatoria1++;
         jugador++;
-        alert(`Gana ${nombre}`);
+        alert(`Gana el jugador`);
     }
     else if (miNumero === 2 && player2 === 1) {
         sumatoria1++;
         jugador++;
-        alert(`Gana ${nombre}`);
+        alert(`Gana el jugador`);
     }
     else if (miNumero === 2 && player2 === 3) {
         sumatoria2++;
@@ -93,7 +99,7 @@ function juego(player1, player2, nombre) {
     else if (miNumero === 3 && player2 === 2) {
         sumatoria1++;
         jugador++;
-        alert(`Gana ${nombre}`);
+        alert(`Gana el jugador`);
     }
 
     console.log(
@@ -128,6 +134,4 @@ if(resJ > resM){
     Jugador: ${sumatoria1}
     Maquina: ${sumatoria2}`)
 }
- 
-
-  
+*/
