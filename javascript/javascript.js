@@ -7,11 +7,22 @@ let sumatoria2 = 0;
 
 let buttonPiedra = document.getElementById ("piedra");
     buttonPiedra.onclick = jugadorpiedra;
+let buttonPapel = document.getElementById ("papel");
+    buttonPapel.onclick = jugadorpapel;
+let buttonTijera = document.getElementById ("tijera");
+    buttonTijera.onclick = jugadortijera;
+
 
     function jugadorpiedra() {
-      return 1;
+        return 1;
 } 
-    
+    function jugadorpapel(){
+        return 2;
+    }
+    function jugadortijera(){
+        return 3;
+    }
+
 function eleccion() {
     let min = 1;
     let max = 3;

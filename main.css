@@ -32,9 +32,10 @@ h2{
     margin: 10px;
     font-family:'Lobster',cursive;
 }
-img{
+button{
     width: 250px;
     height: 250px;
+    background-color:black ;
 }
 .flex_2{
     width: 1500px;
