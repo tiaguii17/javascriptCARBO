@@ -32,10 +32,24 @@ h2{
     margin: 10px;
     font-family:'Lobster',cursive;
 }
-button{
+#piedra{
+    background-image:url(img/piedra1.jpg) ;
     width: 250px;
     height: 250px;
-    background-color:black ;
+    background-color: black;
+}
+#papel{
+    background-image:url(img/papel.jpg) ;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+}
+#tijera{
+    background-image:url(img/tijeras.png) ;
+    width: 250px;
+    height: 250px;
+    background-color: black;
 }
 .flex_2{
     width: 1500px;
