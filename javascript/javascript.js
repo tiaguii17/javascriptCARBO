@@ -1,37 +1,25 @@
 
 
-/*const ELECCIONES = [];
+const ELECCIONES = [];
 
 let sumatoria1 = 0;
-let sumatoria2 = 0;*/
+let sumatoria2 = 0;
 
 let buttonPiedra = document.getElementById ("piedra");
-    buttonPiedra.onclick = jugador1;
-let buttonPapel = document.getElementById ("papel");
-    buttonPapel.onclick = jugador1;
-let buttonTijera = document.getElementById ("tijera");
-    buttonTijera.onclick = jugador1;
+    buttonPiedra.onclick = jugadorpiedra;
 
-    function jugador1() {
-    if (buttonPiedra = true){
-        return 1
-    }else if (buttonPapel = true){
-        return 2
-    }else if (buttonTijera = true){
-        return 3
-    }
-    
+    function jugadorpiedra() {
+      return 1;
 } 
-    jugador1()
-    console.log(jugador1)
-/*function eleccion() {
+    
+function eleccion() {
     let min = 1;
     let max = 3;
 
 
     for (let i = 0; i < 3; i++) {
 
-        let player1 = jugador1();
+        let player1 = jugadorpiedra();
     console.log(player1);
 
     ELECCIONES.push(player1);
@@ -134,4 +122,4 @@ if(resJ > resM){
     Jugador: ${sumatoria1}
     Maquina: ${sumatoria2}`)
 }
-*/
+
