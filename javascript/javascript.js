@@ -6,31 +6,32 @@ let sumatoria1 = 0;
 let sumatoria2 = 0;
 
 let buttonPiedra = document.getElementById ("piedra");
-    buttonPiedra.onclick = jugadorpiedra;
+    buttonPiedra.onclick = jugador1;
 let buttonPapel = document.getElementById ("papel");
-    buttonPapel.onclick = jugadorpapel;
+    buttonPapel.onclick = jugador1;
 let buttonTijera = document.getElementById ("tijera");
-    buttonTijera.onclick = jugadortijera;
+    buttonTijera.onclick = jugador1;
 
-
-    function jugadorpiedra() {
-        return 1;
-} 
-    function jugadorpapel(){
-        return 2;
+    function jugador1 (e){
+        if (e.target.id == "piedra"){
+            console.log(1);
+            return 1;
+        }else if(e.target.id == "papel"){
+            console.log(2);
+            return 1;
+        }else if(e.target.id == "tijera"){
+            console.log(3);
+            return 3;
     }
-    function jugadortijera(){
-        return 3;
-    }
+}
 
 function eleccion() {
     let min = 1;
     let max = 3;
 
-
+/*aca intento que player1 sea igual a lo que retorne la funcion jugador1, pero al correr el codigo me sale un error*/
     for (let i = 0; i < 3; i++) {
-
-        let player1 = jugadorpiedra();
+        let player1 = jugador1();
     console.log(player1);
 
     ELECCIONES.push(player1);

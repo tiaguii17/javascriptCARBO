@@ -40,7 +40,6 @@ h2{
 }
 #papel{
     background-image:url(img/papel.jpg) ;
-    background-size: contain;
     width: 250px;
     height: 250px;
     background-color: black;
