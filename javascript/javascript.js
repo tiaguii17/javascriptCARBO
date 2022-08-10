@@ -10,20 +10,25 @@ let buttonPapel = document.getElementById ("papel");
 let buttonTijera = document.getElementById ("tijera");
     buttonTijera.onclick = jugador1;
 
-let puntjug = localStorage.getItem("puntuacion1");
-let puntMac = localStorage.getItem("puntuacion2");
-
-document.write(puntjug);
-document.write(puntMac);
-
+      let puntuaciones = document.getElementById ("puntuacion")
+        puntuaciones.innerHTML = 
+        `Tabla de Victorias:   
+            Jugador : ${localStorage.getItem("puntuacion1")}
+            Maquina : ${localStorage.getItem("puntuacion2")}`
+  
     function jugador1 (e){
       let piedra = 1;
       let papel = 2;
       let tijera = 3;
       let aux = 0
 
-      localStorage.setItem("puntuacion1" ,sumatoriaJugador);
-      localStorage.setItem("puntuacion2" ,sumatoriaMaquina);
+      localStorage.setItem("puntuacion1", sumatoriaJugador);
+      localStorage.setItem("puntuacion2", sumatoriaMaquina);
+      let puntuaciones = document.getElementById ("puntuacion")
+      puntuaciones.innerHTML = 
+      `Tabla de Victorias:   
+          Jugador : ${localStorage.getItem("puntuacion1")}
+          Maquina : ${localStorage.getItem("puntuacion2")}`
 
         if(e.target.id == "piedra") {
         aux = piedra;
