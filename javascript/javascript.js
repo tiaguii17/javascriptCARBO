@@ -13,8 +13,8 @@ let buttonTijera = document.getElementById ("tijera");
 let puntjug = localStorage.getItem("puntuacion1");
 let puntMac = localStorage.getItem("puntuacion2");
 
-puntjug = document.getElementById("puntuacion");
-puntMac = document.getElementById("puntuacion");
+document.write(puntjug);
+document.write(puntMac);
 
     function jugador1 (e){
       let piedra = 1;
