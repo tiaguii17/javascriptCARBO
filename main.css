@@ -60,3 +60,11 @@ h2{
     justify-content: space-between;
     float:inline-end;
 }
+#puntuacion{
+    background-color: white;
+    width: 250px;
+    height: 150px;
+    position:relative ;
+    float: right;
+    margin-right: 100px;
+}
