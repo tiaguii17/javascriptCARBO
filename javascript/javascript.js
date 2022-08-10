@@ -1,6 +1,7 @@
 
 
 const ELECCIONES = [];
+const ARRAYJUGADOR = [];
 
 let sumatoria1 = 0;
 let sumatoria2 = 0;
@@ -23,8 +24,8 @@ let buttonTijera = document.getElementById ("tijera");
             console.log(3);
             return 3;
     }
-}
-
+    
+}   
 function eleccion() {
     let min = 1;
     let max = 3;
