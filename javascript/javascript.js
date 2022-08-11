@@ -81,6 +81,9 @@ let buttonTijera = document.getElementById ("tijera");
     }
     console.log(sumatoriaJugador)
     console.log(sumatoriaMaquina)
+
+    localStorage.setItem("funcjuego",jugador1())
+
 }   
  function maquina() {
     let numero = Math.floor(Math.random() * 3) + 1;
