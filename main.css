@@ -61,9 +61,10 @@ h2{
     float:inline-end;
 }
 #puntuacion{
-    background-color: white;
+    background-image:linear-gradient( 45deg ,rgb(59, 141, 168) 50%, rgb(190, 127, 9) 50%);
+    color:black;
     width: 250px;
-    height: 150px;
+    height: 75px;
     position:relative ;
     float: right;
     margin-right: 100px;

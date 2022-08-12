@@ -12,9 +12,10 @@ let buttonTijera = document.getElementById ("tijera");
 
       let puntuaciones = document.getElementById ("puntuacion")
         puntuaciones.innerHTML = 
-        `Tabla de Victorias:   
-            Jugador : ${localStorage.getItem("puntuacion1")}
-            Maquina : ${localStorage.getItem("puntuacion2")}`
+        `Tabla de Victorias:    
+            Jugador : 
+                ${sessionStorage.getItem("puntuacion1")}
+            Maquina : ${sessionStorage.getItem("puntuacion2")}`
   
     function jugador1 (e){
       let piedra = 1;
@@ -22,13 +23,13 @@ let buttonTijera = document.getElementById ("tijera");
       let tijera = 3;
       let aux = 0
 
-      localStorage.setItem("puntuacion1", sumatoriaJugador);
-      localStorage.setItem("puntuacion2", sumatoriaMaquina);
+      sessionStorage.setItem("puntuacion1", sumatoriaJugador);
+      sessionStorage.setItem("puntuacion2", sumatoriaMaquina);
       let puntuaciones = document.getElementById ("puntuacion")
       puntuaciones.innerHTML = 
       `Tabla de Victorias:   
-          Jugador : ${localStorage.getItem("puntuacion1")}
-          Maquina : ${localStorage.getItem("puntuacion2")}`
+          Jugador : ${sessionStorage.getItem("puntuacion1")}
+          Maquina : ${sessionStorage.getItem("puntuacion2")}`
 
         if(e.target.id == "piedra") {
         aux = piedra;
@@ -82,7 +83,7 @@ let buttonTijera = document.getElementById ("tijera");
     console.log(sumatoriaJugador)
     console.log(sumatoriaMaquina)
 
-    localStorage.setItem("funcjuego",jugador1())
+    sessionStorage.setItem("funcjuego",jugador1())
 
 }   
  function maquina() {
