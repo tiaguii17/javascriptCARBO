@@ -13,10 +13,10 @@ let buttonTijera = document.getElementById ("tijera");
       let puntuaciones = document.getElementById ("puntuacion")
         puntuaciones.innerHTML = 
         `Tabla de Victorias:    
-            Jugador : 
-                ${sessionStorage.getItem("puntuacion1")}
-            Maquina : ${sessionStorage.getItem("puntuacion2")}`
+            Jugador: ${sessionStorage.getItem("puntuacion1")}
+            Maquina: ${sessionStorage.getItem("puntuacion2")}`
   
+
     function jugador1 (e){
       let piedra = 1;
       let papel = 2;
@@ -36,14 +36,32 @@ let buttonTijera = document.getElementById ("tijera");
 
         switch (maquina()) {
             case 1:
-                alert("Empate");
+                Swal.fire({
+                    title: 'Empate!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
             break;
             case 2:
-                alert("Gana la maquina");
+                Swal.fire({
+                    title: 'Gana la Maquina!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaMaquina ++;
             break;
             case 3:
-                alert("Gana el jugador");
+                Swal.fire({
+                    title: 'Gana el Jugador!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaJugador ++;
             break;          
         }
@@ -52,14 +70,32 @@ let buttonTijera = document.getElementById ("tijera");
 
         switch (maquina()) {
             case 1:
-                alert("Gana el Jugador");
+                Swal.fire({
+                    title: 'Gana el Jugador!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaJugador ++;
             break;
             case 2:
-                alert("Empate");
+                Swal.fire({
+                    title: 'Empate!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
             break;
             case 3:
-                alert("Gana la Maquina");
+                Swal.fire({
+                    title: 'Gana la Maquina!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaMaquina ++;
             break;          
         }
@@ -68,15 +104,33 @@ let buttonTijera = document.getElementById ("tijera");
 
         switch (maquina()) {
             case 1:
-                alert("Gana la Maquina");
+                Swal.fire({
+                    title: 'Gana la Maquina!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaMaquina ++;
             break;
             case 2:
-                alert("Gana el Jugador");
+                Swal.fire({
+                    title: 'Gana el Jugador!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
                 sumatoriaJugador ++;
             break;
             case 3:
-                alert("Empate") ;
+                Swal.fire({
+                    title: 'Empate!!!',
+                    text: 'PIEDRA PAPEL 0...',
+                    confirmButtonText:'TIJERA!',
+                    imageUrl:'/img/piedra-papel-tijeragif.gif',
+                    imageWidth:'300px'
+                  });
             break;          
         }
     }
@@ -90,11 +144,11 @@ let buttonTijera = document.getElementById ("tijera");
     let numero = Math.floor(Math.random() * 3) + 1;
     console.log(`Numero de la maquina ${numero}`);
     if(numero == 1){
-        alert("La Maquina escogio: Piedra");
+        alert("la maquina escogio piedra")
     }else if(numero == 2){
-        alert("La Maquina escogio: Papel");
+        alert("la maquina escogio papel")
     }else if(numero == 3){
-        alert("La Maquina escogio: Tijera");
+        alert("la maquina escogio tijeras")
     }
 
         return numero;
