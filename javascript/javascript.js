@@ -144,15 +144,7 @@ let buttonTijera = document.getElementById ("tijera");
     let numero = Math.floor(Math.random() * 3) + 1;
     console.log(`Numero de la maquina ${numero}`);
     if(numero == 1){
-        Swal.fire(
-
-            'Good job!',
-            
-            'You clicked the button!',
-            
-            'success'
-            
-            )
+        Swal.fire('La Maquina escogio piedra!')
     }else if(numero == 2){
         Swal.fire('La Maquina escogio Papel!')
     }else if(numero == 3){
