@@ -15,13 +15,22 @@ function maquina() {
     let numero = Math.floor(Math.random() * 3) + 1;
      console.log(`Numero de la maquina ${numero}`);
      if(numero == 1){
-         Swal.fire('La Maquina escogio piedra!')
-    }else if(numero == 2){
-        Swal.fire('La Maquina escogio Papel!')
-    }else if(numero == 3){
-        Swal.fire('La Maquina escogio Tijeras!')
-    }
-            
+        Swal.fire({
+            title:'La Maquina escogio Piedra',
+            position:'top-end'
+    })
+        
+   }else if(numero == 2){
+    Swal.fire({
+        title:'La Maquina escogio Papel',
+        position:'top'
+})
+   }else if(numero == 3){
+    Swal.fire({
+        title:'La Maquina escogio Tijera',
+        position:'top'
+})
+   }
     return numero;
 }
 
