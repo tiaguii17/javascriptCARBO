@@ -1,5 +1,4 @@
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
+
 
 let sumatoriaMaquina = 0;
 let sumatoriaJugador = 0;
@@ -16,20 +15,11 @@ function maquina() {
     let numero = Math.floor(Math.random() * 3) + 1;
      console.log(`Numero de la maquina ${numero}`);
      if(numero == 1){
-        Toastify({
-            text:"La Maquina escogio Piedra",
-            duration: 2000
-        })
+        Swal.fire('La Maquina escogio Piedra')
      }else if(numero == 2){
-        Toastify({
-            text:"La Maquina escogio Papel",
-            duration: 2000
-        })
+        Swal.fire('La Maquina escogio Papel')
      }else if(numero == 3){
-        Toastify({
-            text:"La Maquina escogio Tijera",
-            duration: 2000
-        })
+        Swal.fire('La Maquina escogio Tijera')
    }
     return numero;
 }
@@ -44,7 +34,8 @@ function maquina() {
 
         if(e.target.id == "piedra") {
         aux = piedra;
-
+        
+        
         switch (maquina()) {
             case 1:
                 Swal.fire({
@@ -158,4 +149,12 @@ function maquina() {
 
 }   
 
-    
+fetch('/EL.json'
+)
+    .then( (response) => {
+        return response.text();
+    })
+    .then( (data) => {
+        data = JSON.parse(data)
+        console.log(data);
+    });
