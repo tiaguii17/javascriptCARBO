@@ -2,6 +2,8 @@
 
 let sumatoriaMaquina = 0;
 let sumatoriaJugador = 0;
+let elecMaquina; 
+let elecJugador;
 
 let buttonPiedra = document.getElementById ("piedra");
     buttonPiedra.onclick = jugador1;
@@ -9,33 +11,25 @@ let buttonPapel = document.getElementById ("papel");
     buttonPapel.onclick = jugador1;
 let buttonTijera = document.getElementById ("tijera");
     buttonTijera.onclick = jugador1;
-   
+
+    
 
 function maquina() {
     let numero = Math.floor(Math.random() * 3) + 1;
-     console.log(`Numero de la maquina ${numero}`);
-     if(numero == 1){
-        Swal.fire('La Maquina escogio Piedra')
-     }else if(numero == 2){
-        Swal.fire('La Maquina escogio Papel')
-     }else if(numero == 3){
-        Swal.fire('La Maquina escogio Tijera')
-   }
+        if(numero == 1){
+            elecMaquina = "Piedra"
+        }else if(numero == 2){
+            elecMaquina = "Papel"
+        }else if(numero == 3){
+            elecMaquina = "Tijeras"
+        }
     return numero;
 }
 
+function jugador1 (e){
+    if(e.target.id == "piedra") {
+        elecJugador = "Piedra";
 
-    function jugador1 (e){
-      let piedra = 1;
-      let papel = 2;
-      let tijera = 3;
-      let aux = 0
-
-
-        if(e.target.id == "piedra") {
-        aux = piedra;
-        
-        
         switch (maquina()) {
             case 1:
                 Swal.fire({
@@ -68,8 +62,7 @@ function maquina() {
             break;          
         }
     }else if(e.target.id == "papel"){
-        aux = papel;
-
+        elecJugador = "Papel";
         switch (maquina()) {
             case 1:
                 Swal.fire({
@@ -102,8 +95,7 @@ function maquina() {
             break;          
         }
     }else if(e.target.id == "tijera"){
-        aux = tijera;
-
+        elecJugador = "Tijeras"
         switch (maquina()) {
             case 1:
                 Swal.fire({
@@ -136,6 +128,11 @@ function maquina() {
             break;          
         }
     }
+    let elecciones = document.getElementById("elec")
+    elecciones.innerHTML =`
+    La Maquina escogio: ${elecMaquina}          
+    El jugador escogio: ${elecJugador}`;
+
     console.log(sumatoriaJugador)
     console.log(sumatoriaMaquina)
 
@@ -149,7 +146,8 @@ function maquina() {
 
 }   
 
-fetch('/EL.json'
+
+fetch('./EL.json'
 )
     .then( (response) => {
         return response.text();

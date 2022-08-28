@@ -69,3 +69,11 @@ h2{
     float: right;
     margin-right: 100px;
 }
+#elec{
+    background-color: white;
+    color: black;
+    width: 180px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
